@@ -1,0 +1,122 @@
+/* --- Variables & Core Styles --- */
+:root {
+    --bg-color: #0f172a;       /* Deep Dark Blue */
+    --accent-color: #38bdf8;   /* Sky Blue */
+    --card-bg: #1e293b;        /* Lighter Navy for cards */
+    --text-main: #f1f5f9;      /* Off-white */
+    --text-muted: #94a3b8;     /* Gray-blue */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* --- Navigation --- */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 160px 0 100px;
+    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* --- Custom Components --- */
+.custom-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.3);
+}
+
+/* --- Skills & Badges --- */
+.skill-badge {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 5px;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    transition: 0.3s;
+}
+
+.skill-badge:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    color: #0f172a;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #7dd3fc;
+    transform: scale(1.05);
+}
+
+.btn-outline-light {
+    border-radius: 8px;
+}
+
+/* --- Forms --- */
+.form-control {
+    background: #0f172a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.15) !important;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+}
